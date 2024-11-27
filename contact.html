@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Brewline</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Brewline Logo"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="brewing.html">Brewing</a></li>
+                <li><a href="loyalty.html">Loyalty</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="dark-mode-toggle">
+                <span class="sun-icon">
+                    <img src="images/sun-icon.png" alt="Dark mode" width="20" height="20">
+                </span>
+                <input type="checkbox" id="dark-mode-toggle" aria-label="Toggle dark mode">
+                <label for="dark-mode-toggle" class="switch"></label>
+                <span class="moon-icon">
+                    <img src="images/moon-icon.png" alt="Light mode" width="20" height="20">
+                </span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact">
+            <h1>Contact Us</h1>
+            <p>If you have any questions, feel free to reach out to us! We would love to hear from you.</p>
+            
+            <form action="#" method="post">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Brewline Coffee Shop</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
