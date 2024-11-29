@@ -1,11 +1,11 @@
-/* General Reset */
+/* General */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Ensure body takes full height */
+/* Body takes full height */
 html, body {
     height: 100%;
 }
@@ -17,42 +17,41 @@ body {
     min-height: 100%;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #3E3232; /* Dark Coffee Brown */
-    background-color: #D8B49D; /* Light Neutral Background */
+    color: #3E3232;
+    background-color: #D8B49D;
     transition: background-color 0.3s, color 0.3s;
 }
 
 /* Dark Mode Styling */
 body.dark-mode {
-    background-color: #2C2C2C; /* Dark background */
-    color: #F9F9F9; /* Light text */
+    background-color: #2C2C2C;
+    color: #F9F9F9;
     transition: background-color 0.3s, color 0.3s ease-in-out;
 }
 
 body.dark-mode header nav {
-    background-color: #222222; /* Darker nav background */
+    background-color: #222222;
 }
 
 body.dark-mode main {
-    background-color: #333333; /* Dark main background */
-    color: #F9F9F9; /* Light text color for main section */
+    background-color: #333333;
+    color: #F9F9F9;
     transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode footer {
-    background-color: #222222; /* Dark footer */
+    background-color: #222222;
 }
 
-/* Dark Mode Styling */
 body.dark-mode {
-    background-color: #2C2C2C; /* Dark background */
-    color: #F9F9F9; /* Light text */
+    background-color: #2C2C2C;
+    color: #F9F9F9;
     transition: background-color 0.3s, color 0.3s ease-in-out;
 }
 
 body.dark-mode main {
-    background-color: #333333; /* Dark main background */
-    color: #F9F9F9; /* Light text color for main section */
+    background-color: #333333;
+    color: #F9F9F9;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -65,15 +64,15 @@ body.dark-mode h2 {
 }
 
 body.dark-mode p {
-    color: #D9D9D9; /* Light color for text in dark mode */
+    color: #D9D9D9;
 }
 
 body.dark-mode #events li{
-    color: #D9D9D9; /* Light color for text in dark mode */
+    color: #D9D9D9;
 }
 
 body.dark-mode .gallery h1 {
-    color: #6f4f4b;
+    color: #F7C873;
 }
 
 body.dark-mode .brewing li,
@@ -159,12 +158,16 @@ body.dark-mode .btn:hover {
     background-color: #2D2D2D;
 }
 
+body.dark-mode .gallery img{
+    border: 5px solid #3E3232;
+}
+
 /* Header Navigation */
 header nav {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Space between logo, menu, and toggle */
-    background: #503C3C; /* Warm reddish-brown */
+    background: #503C3C;
     padding: 15px 40px;
     position: relative;
     flex-wrap: wrap; /* Allow wrapping to prevent overlap */
@@ -190,14 +193,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #A87C7C; /* Blush Pink */
+    color: #A87C7C;
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #7E6363; /* Soft Mauve */
+    color: #7E6363;
 }
 
 /* Dark Mode Toggle */
@@ -211,7 +214,7 @@ nav ul li a:hover {
 }
 
 .dark-mode-toggle input[type="checkbox"] {
-    display: none; /* Hide the checkbox itself */
+    display: none; /* Hide the checkbox */
 }
 
 .dark-mode-toggle .switch {
@@ -314,7 +317,7 @@ nav ul li a:hover {
 main {
     flex: 1; /* Take up remaining space to push footer to the bottom */
     padding: 20px;
-    background-color: #D8B49D; /* Default light background */
+    background-color: #D8B49D;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -352,10 +355,10 @@ main a:visited {
 footer {
     text-align: center;
     padding: 20px;
-    background: #503C3C; /* Dark Coffee Brown */
+    background: #503C3C;
     color: #F9F9F9;
     transition: background-color 0.3s ease;
-    margin-top: auto; /* Push footer to the bottom if content is short */
+    margin-top: auto; /* Place footer at the bottom */
 }
 
 .social-media {
@@ -380,17 +383,13 @@ button:hover, .btn:hover {
 
 /* Image Gallery */
 .gallery img {
-    width: 100%; /* Full width for responsive design */
+    width: 100%; /* Full width */
     max-width: 200px;
     border: 5px solid #A87C7C;
     border-radius: 10px;
     margin-bottom: 15px;
     margin-left: 4px;
     transition: transform 0.3s, border-color 0.3s;
-}
-
-body.dark-mode .gallery img{
-    border: 5px solid #3E3232;
 }
 
 .gallery img:hover {
@@ -408,7 +407,7 @@ body.dark-mode .gallery img{
 /* Responsive Gallery */
 @media (max-width: 768px) {
     .gallery img {
-        max-width: 150px; /* Smaller images for mobile screens */
+        max-width: 150px; /* Smaller images for smaller screens */
     }
 }
 
@@ -434,29 +433,28 @@ textarea {
 /* Basic Styles for Table */
 .menu-table {
     width: 100%;
-    border-collapse: collapse; /* Ensures no extra space between cells */
+    border-collapse: collapse; /* No extra space between cells */
     margin-bottom: 20px;
 }
 
-/* Hide the table borders */
+/* Hide table borders */
 .menu-table td {
     border: none;
     padding: 10px;
     vertical-align: top;
 }
 
-/* Style for the menu items (names) */
+/* Style for the menu items (products) */
 .menu-table td:first-child {
     font-weight: bold;
-    width: 150px; /* Adjust this to control the space for the names */
+    width: 150px; /* Space for the names */
 }
 
 /* Style for descriptions */
 .menu-table td:nth-child(2) {
-    color: #6f4f4b; /* Dark color for descriptions */
+    color: #6f4f4b;
 }
 
-/* Optional: Add some styling for better spacing or alignment */
 .menu-table tr {
     margin-bottom: 10px;
 }
@@ -476,15 +474,15 @@ body.dark-mode td:first-child {
 
 body.dark-mode td:nth-child(2) {
     padding: 10px 15px;
-    color: #D1D1D1; /* Light gray */
+    color: #D1D1D1;
 }
 
 tr:hover {
-    background-color: #EED9CF; /* Dark coffee brown */
+    background-color: #EED9CF;
 }
 
 tr:hover td:first-child {
-    color: #6A4F4B; /* Bright gold on hover */
+    color: #6A4F4B;
 }
 
 tr:hover td:nth-child(2) {
@@ -493,21 +491,21 @@ tr:hover td:nth-child(2) {
 
 /* Hover Effect for Rows */
 body.dark-mode tr:hover {
-    background-color: #3E3E3E; /* Dark coffee brown */
+    background-color: #3E3E3E;
 }
 
 body.dark-mode tr:hover td:first-child {
-    color: #FFD27F; /* Bright gold on hover */
+    color: #FFD27F;
 }
 
 body.dark-mode tr:hover td:nth-child(2) {
-    color: #F5F5F5; /* Soft off-white */
+    color: #F5F5F5;
 }
 
-/* Responsive Design: Stacking for smaller screens */
+/* Stacking for smaller screens */
 @media (max-width: 768px) {
     .menu-table {
-        display: block; /* Switch from table to block for better responsiveness */
+        display: block; /* Better responsiveness */
     }
 
     .menu-table td {
@@ -516,7 +514,7 @@ body.dark-mode tr:hover td:nth-child(2) {
         box-sizing: border-box;
     }
 
-    /* Adjust font sizes for mobile */
+    /* Adjust font sizes for smaller screens */
     .menu-table td:first-child {
         font-size: 1.1rem;
         margin-bottom: 5px;
@@ -528,14 +526,14 @@ body.dark-mode tr:hover td:nth-child(2) {
     }
 }
 
-/* Further adjustment for very small screens (mobile-first approach) */
+/* Adjust for even smaller screens */
 @media (max-width: 480px) {
     .menu-table td:first-child {
-        font-size: 1rem; /* Slightly smaller font for item names */
+        font-size: 1rem; /* Smaller font for item names */
     }
 
     .menu-table td:nth-child(2) {
-        font-size: 0.9rem; /* Slightly smaller font for descriptions */
+        font-size: 0.9rem; /* Smaller font for descriptions */
     }
 }
 
@@ -553,7 +551,7 @@ body.dark-mode tr:hover td:nth-child(2) {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: #A87C7C; /* Blush Pink */
+    background: #A87C7C;
     border-radius: 3px;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -562,7 +560,7 @@ body.dark-mode .hamburger {
     background: #222222;
 }
 
-/* Hamburger animation for active state */
+/* Hamburger animation for active */
 .hamburger.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 6px);
 }
@@ -582,10 +580,10 @@ body.dark-mode .hamburger {
     }
 
     nav ul.menu {
-        display: none; /* Hide menu initially */
+        display: none; /* Hide menu at first */
         flex-direction: column; /* Stack menu items vertically */
         width: 100%;
-        background: #503C3C; /* Dark background for menu */
+        background: #503C3C;
         position: absolute;
         top: 60px;
         left: 0;
@@ -611,15 +609,6 @@ body.dark-mode .hamburger {
     }
 }
 
-
-
-
-
-
-
-
-
-
 /* Dropdown Menu */
 nav ul .dropdown {
     position: relative;
@@ -631,14 +620,14 @@ nav ul .dropdown-content {
     position: absolute;
     background-color: #503C3C;
     width: 190px;  /* Increased width */
-    padding: 10px 15px;  /* Padding for wider appearance */
+    padding: 10px 15px;
     border-radius: 10px;  /* Rounded corners */
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    right: 0;  /* Align the dropdown to the right edge */
+    right: 0;  /* Align the dropdown to the right */
 }
 
-/* Styling for the dark mode toggle option */
+/* Dark mode toggle styling */
 nav ul .dropdown-content .dark-mode-toggle {
     display: flex;
     justify-content: space-between;
@@ -651,16 +640,8 @@ nav ul .dropdown-content .dark-mode-toggle {
 }
 
 nav ul .dropdown-content .dark-mode-toggle:hover {
-    background-color: #7e6363;  /* Light hover effect */
+    background-color: #7e6363;
 }
-
-/*
-nav ul .dropdown-content li a {
-    color: #A87C7C;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
-} */
 
 .dark-mode nav ul .dropdown-content{
     background-color: #222222;
@@ -682,12 +663,12 @@ nav ul .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Mobile View: Show dropdown when hamburger is clicked */
+/* Show dropdown when hamburger is clicked in smaller screens */
 @media (max-width: 855px) {
     nav ul .dropdown-content {
         position: static; /* Remove absolute positioning */
         width: 100%; /* Make dropdown take full width */
-        display: none; /* Hide by default on mobile */
+        display: none; /* Hide by default on smaller screens */
     }
 
     nav ul .dropdown.active .dropdown-content {
@@ -695,86 +676,54 @@ nav ul .dropdown:hover .dropdown-content {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Slider container */
 .slider-container {
-    width: 100%; /* Full width of the viewport */
-    height: 300px; /* Adjust height to fit your images */
+    width: 100%; /* Full width */
+    height: 300px; /* Adjust height to fit images */
     overflow: hidden; /* Hides the extra content outside the viewport */
     position: relative;
 }
 
-/* Slider element (which holds the images) */
+/* Slider element */
 .slider {
     display: flex;
-    animation: slide 120s linear infinite; /* Adjust duration for 30 images */
+    animation: slide 120s linear infinite; /* Slide duration */
 }
 
-/* Individual slide */
+/* Slide */
 .slide {
-    flex: 0 0 auto; /* Allow images to shrink to fit their content */
-    width: 50%; /* Each slide takes up 50% of the container width */
+    flex: 0 0 auto; /* Allow images to shrink */
+    width: 50%; /* Slide takes 50% of the container width */
 }
 
 /* Images inside the slide */
 .slider img {
     width: 100%; /* Image fits the slide */
-    height: 300px; /* Adjust height */
-    object-fit: cover; /* Ensure images cover the area */
+    height: 300px; /* Height */
+    object-fit: cover; /* Images cover the area */
 }
 
-/* Keyframes for smooth infinite scrolling */
+/* Keyframes for smooth scrolling */
 @keyframes slide {
     0% {
         transform: translateX(0); /* Start position */
     }
     100% {
-        transform: translateX(-1500%); /* 30 images * 50% width per image */
+        transform: translateX(-1500%); /* 30 images * 50% width */
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Locations Section */
 .locations {
     padding: 20px;
     margin-bottom: 40px;
-    background: #EED9CF; /* Light cream background */
+    background: #EED9CF;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .locations h2 {
-    color: #6B4226; /* Coffee Brown for titles */
+    color: #6B4226;
     margin-bottom: 15px;
     font-size: 1.8rem;
     text-align: center;
@@ -798,29 +747,29 @@ nav ul .dropdown:hover .dropdown-content {
 
 .locations .location p {
     font-size: 1rem;
-    color: #4A3C31; /* Text for addresses */
+    color: #4A3C31;
     text-align: center;
 }
 
 /* Dark Mode */
 body.dark-mode .locations {
-    background: #3E3E3E; /* Darker background for dark mode */
+    background: #3E3E3E;
 }
 
 body.dark-mode .locations h2 {
-    color: #F7C873; /* Highlighted Gold */
+    color: #F7C873;
 }
 
 body.dark-mode .locations p {
-    color: #D3D3D3; /* Light text */
+    color: #D3D3D3;
 }
 
 /* Testimonials Section */
 .testimonials {
     padding: 20px;
     margin-bottom: 40px;
-    background: #F7EDE1; /* Light cream background */
-    border-left: 5px solid #A87C7C; /* Accent border */
+    background: #F7EDE1;
+    border-left: 5px solid #A87C7C;
     border-radius: 10px;
 }
 
@@ -841,7 +790,7 @@ body.dark-mode .locations p {
 /* Dark Mode */
 body.dark-mode .testimonials {
     background: #3E3E3E;
-    border-left: 5px solid #F7C873; /* Golden accent in dark mode */
+    border-left: 5px solid #F7C873;
 }
 
 body.dark-mode .testimonials p {
@@ -884,7 +833,7 @@ body.dark-mode .testimonials p {
 
 .events li span {
     font-weight: bold;
-    color: #835C3B; /* Darker coffee brown */
+    color: #835C3B;
 }
 
 /* Dark Mode */
@@ -900,8 +849,6 @@ body.dark-mode .events span {
     color: #F7C873;
 }
 
-
-
 .responsive-map {
     position: relative;
     width: 100%; /* Full width of the container */
@@ -915,4 +862,116 @@ body.dark-mode .events span {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+/* Style for the testimonials */
+#testimonials {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.dark-mode #testimonials {
+    border: 1px solid #F7C873;
+    background-color: #3E3E3E;
+    color: #F7C873;
+}
+
+/* Style for each review container */
+.testimonial {
+    position: relative;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.dark-mode .testimonial {
+    background-color: #3E3E3E;
+}
+
+.dark-mode #testimonials:hover {
+    border-color: #E8B265;
+}
+
+.dark-mode .testimonial:hover {
+    background-color: #4F4F4F;
+}
+
+/* Change background color on hovering over review */
+.testimonial:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.02); /* Zoom effect */
+}
+
+/* Style for the text inside review */
+.testimonial p {
+    margin: 0;
+    color: #555;
+    font-style: italic;
+}
+
+/* Style for the review author's name */
+.testimonial p:last-child {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #7a4e2a;
+}
+
+.dark-mode .testimonial p:last-child {
+    color: #F7C873;
+}
+
+/* Container for each review */
+.testimonial {
+    display: flex; /* Align profile photos and text horizontally */
+    align-items: center; /* Vertically align the photo with the text */
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Profile photo styling */
+.profile-photo {
+    width: 50px; /* Set photo size */
+    height: 50px; /* Width for circle */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Image scaling */
+    margin-right: 15px; /* Space between photo and text */
+    border: 2px solid #ddd;
+}
+
+/* Text container for the review */
+.review-text {
+    flex: 1; /* Take up the remaining space next to the profile photo */
+}
+
+/* Text styling for review */
+.review-text p {
+    margin: 0;
+    color: #555;
+    font-style: italic;
+}
+
+.review-text p:last-child {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #7a4e2a;
+}
+
+/* Hover effect for individual reviews */
+.testimonial:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.02);
 }

@@ -69,6 +69,8 @@ https://pixabay.com/photos/coffee-coffee-shop-coffee-pot-6840457/
 https://pixabay.com/photos/coffee-coffee-shop-coffee-pot-6840457/
 
 
+profile pictures
 
-social icons
+https://de.freepik.com/fotos-kostenlos/portraet-des-mannes-schauend-vor-ihm_6675480.htm#fromView=search&page=1&position=6&uuid=d215d1fc-9d9f-4fb9-8216-2ea14127f5e8
 
+https://de.freepik.com/fotos-kostenlos/schoene-teenager-mit-langen-haaren_1092052.htm#fromView=search&page=1&position=7&uuid=f46bcb49-bdb9-4314-a427-e0c6bf6a6e92

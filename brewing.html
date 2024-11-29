@@ -13,25 +13,37 @@
             <div class="logo">
                 <a href="index.html"><img src="images/logo.png" alt="Brewline Logo"></a>
             </div>
-            <ul>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="menu hidden">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="brewing.html">Brewing</a></li>
+                <li><a href="brewing.html"><u>Brewing</u></a></li>
                 <li><a href="loyalty.html">Loyalty</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <!-- Dark Mode Toggle Inside Menu -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Preferences</a>
+                    <ul class="dropdown-content">
+                        <li class="dark-mode-toggle">
+                            <!--<p>Toggle Dark Mode</p>-->
+                            <span class="sun-icon">
+                                <img src="images/sun-icon.png" alt="Dark mode" width="20" height="20">
+                            </span>
+                            <input type="checkbox" id="dark-mode-toggle" aria-label="Toggle dark mode">
+                            <label for="dark-mode-toggle" class="switch"></label>
+                            <span class="moon-icon">
+                                <img src="images/moon-icon.png" alt="Light mode" width="20" height="20">
+                            </span>
+                        </li>
+                    </ul>
+                </li>
             </ul>
-            <div class="dark-mode-toggle">
-                <span class="sun-icon">
-                    <img src="images/sun-icon.png" alt="Dark mode" width="20" height="20">
-                </span>
-                <input type="checkbox" id="dark-mode-toggle" aria-label="Toggle dark mode">
-                <label for="dark-mode-toggle" class="switch"></label>
-                <span class="moon-icon">
-                    <img src="images/moon-icon.png" alt="Light mode" width="20" height="20">
-                </span>
-            </div>
         </nav>
     </header>
 
@@ -85,7 +97,12 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Brewline Coffee Shop</p>
+        <p>&copy; 2024 Brewline Coffee Shop | Project by Pająk Piotr</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank"><img src="https://facebook.com/favicon.ico" alt="Facebook" height="35px"></a>
+            <a href="https://bsky.app/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bluesky_Logo.svg/600px-Bluesky_Logo.svg.png" alt="Bluesky" height="35px"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="https://twitter.com/favicon.ico" alt="Twitter" height="35px"></a>
+        </div>
     </footer>
     <script src="js/script.js"></script>
 </body>
