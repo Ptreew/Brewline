@@ -89,9 +89,9 @@ Aby włączyć tryb ciemny, należy najechać na element listy `Preferences` w n
 
 ---
 
-![dark-mode-toggle](media/dark-mode-toggle.png)
+![dark-mode-toggle](Brewline/Dokumentacja/media/dark-mode-toggle.png)
 
-![dark-mode-toggle](media/dark-mode-toggle.gif)
+![dark-mode-toggle](Brewline/Dokumentacja/media/dark-mode-toggle.gif)
 
 Kod przełącznika:
 
@@ -215,11 +215,11 @@ function applyDarkMode() {
 
 Tryb jasny:
 
-![index-light](media/index-light.png)
+![index-light](Brewline/Dokumentacja/media/index-light.png)
 
 Tryb ciemny:
 
-![index-dark](media/index-dark.png)
+![index-dark](Brewline/Dokumentacja/media/index-dark.png)
 
 Na stronie głównej znajdują się sekcje:
 - Hero (powitanie i główne logo strony),
@@ -231,13 +231,13 @@ Na stronie głównej znajdują się sekcje:
 
 **Na każdej ze stron (podstron) znajduje się ten sam panel nawigacyjny, elementy stron są responsywne.**
 
-![nav-light](media/nav-light.png)
+![nav-light](Brewline/Dokumentacja/media/nav-light.png)
 
-![nav-dark](media/nav-dark.png)
+![nav-dark](Brewline/Dokumentacja/media/nav-dark.png)
 
 Zawiera on logo wykonane w programie GIMP (z użyciem favicon) oraz wycentrowaną listę z linkami do poszczególnych podstron. Aktualnie wyświetlana strona jest podkreślona dla większej przejrzystości. 
 
-![Screenshot_20241122_184343](media/Screenshot_20241122_184343.png)
+![Screenshot_20241122_184343](Brewline/Dokumentacja/media/Screenshot_20241122_184343.png)
 
 Kod panelu nawigacyjnego:
 
@@ -274,7 +274,7 @@ HTML
 
 Menu jest responsywne, w przypadku, gdy elementy nie będą się mieściły na ekranie, menu jest ukrywane i pokazywany jest 'hamburger' button, który po kliknięciu wyświetla menu w pozycji pionowej.
 
-![responsive-menu](media/responsive-menu.gif)
+![responsive-menu](Brewline/Dokumentacja/media/responsive-menu.gif)
 
 Fragment kodu, który jest odpowiedzialny za responsywność menu, 'hamburger' button oraz pionowe wyświetlanie listy:
 
@@ -456,9 +456,9 @@ JS
 
 Poniżej mamy sekcję 'hero', która jest logiem/powitaniem strony oraz sekcję 'slider' odpowiedzialną za pokaz slajdów (najnowsze zdjęcia) na stronie głównej.
 
-![hero-section-and-slider](media/hero-section-and-slider.png)
+![hero-section-and-slider](Brewline/Dokumentacja/media/hero-section-and-slider.png)
 
-![slider](media/slider.gif)
+![slider](Brewline/Dokumentacja/media/slider.gif)
 
 Kod `hero` oraz sekcji `slider`:
 
@@ -583,15 +583,15 @@ CSS
 
 Następnie mamy skecję 'locations', która zawiera lokalizację kawiarni (do wygenerowania mapy użyto narzędzia: [googlemapsgenerator](https://www.googlemapsgenerator.com/en/)).
 
-![our-locations](media/our-locations.png)
+![our-locations](Brewline/Dokumentacja/media/our-locations.png)
 
 W kolejnej sekcji (`testimonials`) są zawarte opinie klientów. Po najechaniu myszką następuje małe 'powiększenie' oraz zmieniany jest kolor tła dla poszczególnych opinii. W trybie ciemnym zmieniany jest też kolor dla `border`.
 
 Tryb jasny:
-![testimonials-light](media/testimonials-light.gif)
+![testimonials-light](Brewline/Dokumentacja/media/testimonials-light.gif)
 
 Tryb ciemny:
-![testimonials-dark](media/testimonials-dark.gif)
+![testimonials-dark](Brewline/Dokumentacja/media/testimonials-dark.gif)
 
 Kod dla `testimonials`:
 
@@ -763,17 +763,17 @@ body.dark-mode .testimonials p {
 
 Pod koniec umieszczone są sekcje dotyczące nadchodzących eventów oraz formularz do newslettera. Pole `input` w formularzu używa walidacji adresu e-mail. Border pola `input` zmienia kolor po kliknięciu, a przycisk `Subscribe` zmienia kolor po najechaniu.
 
-![events-and-newsletter](media/events-and-newsletter.png)
+![events-and-newsletter](Brewline/Dokumentacja/media/events-and-newsletter.png)
 
-![newsletter-hover](media/newsletter-hover.gif)
+![newsletter-hover](Brewline/Dokumentacja/media/newsletter-hover.gif)
 
 Stopka dla każdej podstrony jest taka sama. Kolor tła jest zmieniany po przełączeniu na tryb ciemny. Stopka zawiera znak copyright, nazwę projektu, imię i nazwisko osoby wykonującej projekt oraz linki do social media t.j. [Facebook](https://facebook.com), [Bluesky](https://bsky.app/) oraz [Twitter](https://twitter.com).
 
 Tryb jasny:
-![footer-light](media/footer-light.png)
+![footer-light](Brewline/Dokumentacja/media/footer-light.png)
 
 Tryb ciemny:
-![footer-dark](media/footer-dark.png)
+![footer-dark](Brewline/Dokumentacja/media/footer-dark.png)
 
 ---
 
@@ -782,10 +782,10 @@ Tryb ciemny:
 Zawiera podstawowe informacje dotyczące kawiarni `Brewline`.
 
 Tryb jasny:
-![about-light](media/about-light.png)
+![about-light](Brewline/Dokumentacja/media/about-light.png)
 
 Tryb ciemny:
-![about-dark](media/about-dark.png)
+![about-dark](Brewline/Dokumentacja/media/about-dark.png)
 
 ---
 
@@ -794,14 +794,14 @@ Tryb ciemny:
 Podstrona przedstawia menu kawiarni w formie tabeli z opisami produktów. W trybie ciemnym kolor tekstu oraz tło są dostosowane.
 
 Tryb jasny:
-![menu-light](media/menu-light.png)
+![menu-light](Brewline/Dokumentacja/media/menu-light.png)
 
-![menu-light](media/menu-light.gif)
+![menu-light](Brewline/Dokumentacja/media/menu-light.gif)
 
 Tryb ciemny:
-![menu-dark](media/menu-dark.png)
+![menu-dark](Brewline/Dokumentacja/media/menu-dark.png)
 
-![menu-dark](media/menu-dark.gif)
+![menu-dark](Brewline/Dokumentacja/media/menu-dark.gif)
 
 Kod dla `menu`:
 
@@ -919,13 +919,13 @@ body.dark-mode .menu h2 {
 Galeria zdjęć z efektem powiększania po najechaniu kursorem. Strona jest w pełni responsywna.
 
 Tryb jasny:
-![gallery-light](media/gallery-light.png)
+![gallery-light](Brewline/Dokumentacja/media/gallery-light.png)
 
 Responsywność:
-![gallery](media/gallery.gif)
+![gallery](Brewline/Dokumentacja/media/gallery.gif)
 
 Tryb ciemny:
-![gallery-dark](media/gallery-dark.png)
+![gallery-dark](Brewline/Dokumentacja/media/gallery-dark.png)
 
 Kod dla `gallery`:
 
@@ -1016,10 +1016,10 @@ body.dark-mode .gallery img{
 Opis różnych technik parzenia kawy wraz z odnośnikami do zewnętrznych artykułów.
 
 Tryb jasny:
-![brewing-light](media/brewing-light.png)
+![brewing-light](Brewline/Dokumentacja/media/brewing-light.png)
 
 Tryb ciemny:
-![brewing-dark](media/brewing-dark.png)
+![brewing-dark](Brewline/Dokumentacja/media/brewing-dark.png)
 
 Style dla `brewing`:
 
@@ -1062,10 +1062,10 @@ body.dark-mode .brewing a:visited {
 Informacje na temat programu lojalnościowego oraz sekcja FAQ z najczęściej zadawanymi pytaniami.
 
 Tryb jasny:
-![loyalty-light](media/loyalty-light.png)
+![loyalty-light](Brewline/Dokumentacja/media/loyalty-light.png)
 
 Tryb ciemny:
-![loyalty-dark](media/loyalty-dark.png)
+![loyalty-dark](Brewline/Dokumentacja/media/loyalty-dark.png)
 
 Style dla `loyalty`:
 
@@ -1099,14 +1099,14 @@ body.dark-mode .faq p {
 Podstrona zawiera formularz używany do kontaktu klienta z kawiarnią. Zawiera dwa pola `input` oraz jedno `textarea`. Po kliknięciu na pole formularza zmieniany jest jego kolor obramowania (również w trybie ciemnym). Po najechaniu na przycisk zmienia on kolor tła. Formularz również sprawdza poprawność e-mail, wszystkie pola są wymagane. Zablokowano możliwość zmieniania rozmiaru `textarea`.
 
 Tryb jasny:
-![contact-light](media/contact-light.png)
+![contact-light](Brewline/Dokumentacja/media/contact-light.png)
 
-![contact-light](media/contact-light.gif)
+![contact-light](Brewline/Dokumentacja/media/contact-light.gif)
 
 Tryb ciemny:
-![contact-dark](media/contact-dark.png)
+![contact-dark](Brewline/Dokumentacja/media/contact-dark.png)
 
-![contact-dark](media/contact-dark.gif)
+![contact-dark](Brewline/Dokumentacja/media/contact-dark.gif)
 
 
 
