@@ -1,0 +1,3 @@
+Dokumentacja jest napisana w pliku README.md oraz Dokumentacja.docx
+Zawartość tych plików jest podobna, w pliku README.md zawarte są obrazy typu GIF.
+Plik README.md można otworzyć urzywając narzędzi t.j 'Typora' lub sprawdzić na stronie projektu - https://github.com/Ptreew/Brewline

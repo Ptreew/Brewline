@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Brewline</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Brewline Logo"></a>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="menu hidden">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html"><u>Menu</u></a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="brewing.html">Brewing</a></li>
+                <li><a href="loyalty.html">Loyalty</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- Dark Mode Toggle Inside Menu -->
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Preferences</a>
+                    <ul class="dropdown-content">
+                        <li class="dark-mode-toggle">
+                            <!--<p>Toggle Dark Mode</p>-->
+                            <span class="sun-icon">
+                                <img src="images/sun-icon.png" alt="Dark mode" width="20" height="20">
+                            </span>
+                            <input type="checkbox" id="dark-mode-toggle" aria-label="Toggle dark mode">
+                            <label for="dark-mode-toggle" class="switch"></label>
+                            <span class="moon-icon">
+                                <img src="images/moon-icon.png" alt="Light mode" width="20" height="20">
+                            </span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="menu">
+            <h1>Our Menu</h1>
+            <br>
+
+            <h2>Coffee Classics</h2>
+            <table class="menu-table">
+                <tr>
+                    <td><strong>Espresso:</strong> $3.50</td>
+                    <td>A bold and concentrated shot of pure coffee, perfect for those who enjoy an intense flavor experience.</td>
+                </tr>
+                <tr>
+                    <td><strong>Americano:</strong> $3.00</td>
+                    <td>Smooth and aromatic, made by blending a rich espresso with hot water for a milder taste.</td>
+                </tr>
+                <tr>
+                    <td><strong>Latte:</strong> $4.00</td>
+                    <td>A creamy combination of espresso and steamed milk, topped with a gentle layer of foam.</td>
+                </tr>
+                <tr>
+                    <td><strong>Cappuccino:</strong> $4.00</td>
+                    <td>Classic balance of espresso, steamed milk, and velvety foam for a luxurious finish.</td>
+                </tr>
+                <tr>
+                    <td><strong>Mocha:</strong> $4.50</td>
+                    <td>A decadent blend of espresso, steamed milk, and rich chocolate, topped with whipped cream.</td>
+                </tr>
+            </table>
+            <br>
+
+            <h2>Specialty Brews</h2>
+            <table class="menu-table">
+                <tr>
+                    <td><strong>Flat White:</strong> $4.00</td>
+                    <td>Smooth and velvety, featuring a perfect microfoam layer atop a rich espresso base.</td>
+                </tr>
+                <tr>
+                    <td><strong>Macchiato:</strong> $3.75</td>
+                    <td>A bold espresso shot lightly topped with a dollop of velvety steamed milk.</td>
+                </tr>
+                <tr>
+                    <td><strong>Cold Brew:</strong> $4.50</td>
+                    <td>Slowly brewed to bring out natural sweetness and a smooth, refreshing flavor.</td>
+                </tr>
+                <tr>
+                    <td><strong>Nitro Cold Brew:</strong> $5.00</td>
+                    <td>Infused with nitrogen for a creamy texture and a bold, invigorating taste.</td>
+                </tr>
+            </table>
+            <br>
+
+            <h2>Signature Drinks</h2>
+            <table class="menu-table">
+                <tr>
+                    <td><strong>Vanilla Bean Latte:</strong> $4.75</td>
+                    <td>A rich and creamy latte infused with the warm sweetness of vanilla bean.</td>
+                </tr>
+                <tr>
+                    <td><strong>Caramel Macchiato:</strong> $5.00</td>
+                    <td>A layered drink with creamy milk, espresso, and a luscious caramel drizzle.</td>
+                </tr>
+                <tr>
+                    <td><strong>Chai Latte:</strong> $4.50</td>
+                    <td>A cozy blend of spiced chai tea and steamed milk with just the right amount of sweetness.</td>
+                </tr>
+                <tr>
+                    <td><strong>Matcha Latte:</strong> $4.75</td>
+                    <td>Earthy and vibrant matcha green tea whisked to perfection with steamed milk.</td>
+                </tr>
+            </table>
+            <br>
+
+            <h2>Non-Coffee Options</h2>
+            <table class="menu-table">
+                <tr>
+                    <td><strong>Hot Chocolate:</strong> $3.50</td>
+                    <td>A rich and comforting drink made with premium chocolate and steamed milk, topped with whipped cream.</td>
+                </tr>
+                <tr>
+                    <td><strong>London Fog:</strong> $4.00</td>
+                    <td>A fragrant blend of Earl Grey tea, steamed milk, and a hint of vanilla for a soothing experience.</td>
+                </tr>
+                <tr>
+                    <td><strong>Herbal Teas:</strong> $3.50</td>
+                    <td>A rotating selection of soothing, caffeine-free teas to match your mood.</td>
+                </tr>
+                <tr>
+                    <td><strong>Iced Teas:</strong> $3.50</td>
+                    <td>Refreshing and crisp, available in flavors like classic black, green tea, or seasonal infusions.</td>
+                </tr>
+            </table>
+            <br>
+
+            <h2>Add-Ons</h2>
+            <table class="menu-table">
+                <tr>
+                    <td><strong>Extra Shot of Espresso:</strong> $0.75</td>
+                    <td>Boost your drink with an extra shot of bold espresso.</td>
+                </tr>
+                <tr>
+                    <td><strong>Dairy-Free Milk (Oat, Almond, Soy):</strong> $0.50</td>
+                    <td>Choose a dairy-free alternative for your perfect cup.</td>
+                </tr>
+                <tr>
+                    <td><strong>Flavored Syrups (Vanilla, Caramel, Hazelnut):</strong> $0.50</td>
+                    <td>Add a touch of sweetness and flavor to your drink.</td>
+                </tr>
+                <tr>
+                    <td><strong>Whipped Cream:</strong> $0.25</td>
+                    <td>A creamy finishing touch to any drink.</td>
+                </tr>
+            </table>
+            <br>
+            
+            <h2>Pair Your Drink</h2>
+            <table class="menu-table">
+                <tr>
+                    <td><strong>Butter Croissant:</strong> $3.25</td>
+                    <td>Flaky and buttery, perfect for a light snack.</td>
+                </tr>
+                <tr>
+                    <td><strong>Chocolate Chip Muffin:</strong> $3.50</td>
+                    <td>Moist and chocolatey, a delightful companion to your drink.</td>
+                </tr>
+                <tr>
+                    <td><strong>Almond Biscotti:</strong> $2.75</td>
+                    <td>Crunchy and nutty, ideal for dipping into your coffee.</td>
+                </tr>
+                <tr>
+                    <td><strong>Seasonal Scones:</strong> $3.75</td>
+                    <td>Freshly baked and infused with seasonal flavors.</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Brewline Coffee Shop | Project by Pająk Piotr</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank"><img src="https://facebook.com/favicon.ico" alt="Facebook" height="35px"></a>
+            <a href="https://bsky.app/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Bluesky_Logo.svg/600px-Bluesky_Logo.svg.png" alt="Bluesky" height="35px"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="https://twitter.com/favicon.ico" alt="Twitter" height="35px"></a>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

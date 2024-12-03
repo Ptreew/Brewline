@@ -1,0 +1,977 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body takes full height */
+html, body {
+    height: 100%;
+}
+
+/* Flexbox Layout for Full Page */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #3E3232;
+    background-color: #D8B49D;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styling */
+body.dark-mode {
+    background-color: #2C2C2C;
+    color: #F9F9F9;
+    transition: background-color 0.3s, color 0.3s ease-in-out;
+}
+
+body.dark-mode header nav {
+    background-color: #222222;
+}
+
+body.dark-mode main {
+    background-color: #333333;
+    color: #F9F9F9;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode footer {
+    background-color: #222222;
+}
+
+body.dark-mode {
+    background-color: #2C2C2C;
+    color: #F9F9F9;
+    transition: background-color 0.3s, color 0.3s ease-in-out;
+}
+
+body.dark-mode main {
+    background-color: #333333;
+    color: #F9F9F9;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode h1 {
+    color: #F7C873;    
+}
+
+body.dark-mode h2 {
+    color: #E8B265;
+}
+
+body.dark-mode p {
+    color: #D9D9D9;
+}
+
+body.dark-mode #events li{
+    color: #D9D9D9;
+}
+
+body.dark-mode .gallery h1 {
+    color: #F7C873;
+}
+
+body.dark-mode .brewing li,
+body.dark-mode .brewing p {
+    color: #D3D3D3;
+}
+
+body.dark-mode .brewing li:hover {
+    color: #F7C873;
+}
+
+body.dark-mode .brewing h1 {
+    color: #F7C873;
+}
+
+body.dark-mode .brewing h2 {
+    color: #E8B265;
+}
+
+body.dark-mode .brewing a {
+    color: #A8DADC;
+    text-decoration: none;
+}
+
+body.dark-mode .brewing a:hover {
+    color: #FFA07A;
+}
+
+body.dark-mode .brewing a:visited {
+    color: #A1A1A1;
+}
+
+body.dark-mode .loyalty h1 {
+    color: #F7C873;
+}
+
+body.dark-mode .loyalty h2 {
+    color: #E8B265;
+}
+
+body.dark-mode .faq h2 {
+    color: #E8B265;
+}
+
+body.dark-mode .loyalty li,
+body.dark-mode .loyalty p {
+    color: #D3D3D3;
+}
+
+body.dark-mode .faq li,
+body.dark-mode .faq p {
+    color: #D3D3D3;
+}
+
+body.dark-mode .contact h1 {
+    color: #F7C873;
+}
+
+body.dark-mode .contact p {
+    color: #D3D3D3;
+}
+
+body.dark-mode input,
+body.dark-mode textarea {
+    border: 1px solid #F7C873;
+    background-color: #3E3E3E;
+    color: #F7C873;
+}
+
+body.dark-mode input:focus, 
+body.dark-mode textarea:focus {
+    border-color: #E8B265;
+}
+
+body.dark-mode button,
+body.dark-mode .btn {
+    background-color: #3E3E3E;
+    color: #F9F9F9;
+}
+
+body.dark-mode button:hover,
+body.dark-mode .btn:hover {
+    background-color: #2D2D2D;
+}
+
+body.dark-mode .gallery img{
+    border: 5px solid #3E3232;
+}
+
+/* Header Navigation */
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo, menu, and toggle */
+    background: #503C3C;
+    padding: 15px 40px;
+    position: relative;
+    flex-wrap: wrap; /* Allow wrapping to prevent overlap */
+}
+
+nav .logo img {
+    height: 40px;
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Center menu items horizontally */
+    flex: 1; /* Allow the menu to take up the middle space */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #A87C7C;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #7E6363;
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-left: auto; /* Push the toggle to the far right */
+    flex-shrink: 0; /* Prevent shrinking of the toggle */
+}
+
+.dark-mode-toggle input[type="checkbox"] {
+    display: none; /* Hide the checkbox */
+}
+
+.dark-mode-toggle .switch {
+    width: 50px;
+    height: 26px;
+    background-color: #ccc;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 2px solid #aaa;
+    overflow: hidden;
+}
+
+.dark-mode-toggle .switch::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3px;
+    transition: left 0.3s ease;
+}
+
+.dark-mode-toggle input[type="checkbox"]:checked + .switch::before {
+    left: calc(100% - 23px); /* Move to the right inside the switch */
+}
+
+.dark-mode-toggle .sun-icon, .dark-mode-toggle .moon-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.dark-mode-toggle .sun-icon {
+    order: 0; /* Make the sun appear after the toggle */
+}
+
+.dark-mode-toggle .moon-icon {
+    order: 2; /* Make the moon appear before the toggle */
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center all items */
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .dark-mode-toggle {
+        margin-top: 10px; /* Place the toggle below the menu */
+        align-self: flex-end; /* Align it to the right of the header */
+    }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('../images/coffee-bg.jpg') no-repeat center center/cover;
+    color: #F9F9F9;
+    transition: background-color 0.3s ease;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #A87C7C;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #F9F9F9;
+}
+
+/* Responsive Hero Section */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+}
+
+/* Main Section */
+main {
+    flex: 1; /* Take up remaining space to push footer to the bottom */
+    padding: 20px;
+    background-color: #D8B49D;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main h1 {
+    color: #6B4226;
+}
+
+main h2 {
+    color: #835C3B;
+}
+
+main p {
+    color: #4A3C31;
+    margin-top: 10px;
+}
+
+main li {
+    color: #4A3C31;
+}
+
+main a {
+    color: #1E6091;
+    text-decoration: none;
+}
+
+main a:hover {
+    color: #E76F51;
+}
+
+main a:visited {
+    color: #6B4226;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #503C3C;
+    color: #F9F9F9;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Place footer at the bottom */
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+/* Buttons */
+button, .btn {
+    padding: 10px 20px;
+    background-color: #503C3C;
+    color: #F9F9F9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover, .btn:hover {
+    background-color: #7E6363;
+}
+
+/* Image Gallery */
+.gallery img {
+    width: 100%; /* Full width */
+    max-width: 200px;
+    border: 5px solid #A87C7C;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-left: 4px;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    border-color: #7E6363;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Responsive Gallery */
+@media (max-width: 768px) {
+    .gallery img {
+        max-width: 150px; /* Smaller images for smaller screens */
+    }
+}
+
+/* Form Elements */
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #7E6363;
+    background-color: #D4B89F;
+    border-radius: 5px;
+}
+
+form input:focus, form textarea:focus {
+    border-color: #503C3C;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Basic Styles for Table */
+.menu-table {
+    width: 100%;
+    border-collapse: collapse; /* No extra space between cells */
+    margin-bottom: 20px;
+}
+
+/* Hide table borders */
+.menu-table td {
+    border: none;
+    padding: 10px;
+    vertical-align: top;
+}
+
+/* Style for the menu items (products) */
+.menu-table td:first-child {
+    font-weight: bold;
+    width: 150px; /* Space for the names */
+}
+
+/* Style for descriptions */
+.menu-table td:nth-child(2) {
+    color: #6f4f4b;
+}
+
+.menu-table tr {
+    margin-bottom: 10px;
+}
+
+body.dark-mode .menu h1 {
+    color: #F7C873;
+}
+
+body.dark-mode .menu h2 {
+    color: #E8B265;
+}
+
+body.dark-mode td:first-child {
+    font-weight: bold;
+    color: #F4B860;
+}
+
+body.dark-mode td:nth-child(2) {
+    padding: 10px 15px;
+    color: #D1D1D1;
+}
+
+tr:hover {
+    background-color: #EED9CF;
+}
+
+tr:hover td:first-child {
+    color: #6A4F4B;
+}
+
+tr:hover td:nth-child(2) {
+    color: #705E57;
+}
+
+/* Hover Effect for Rows */
+body.dark-mode tr:hover {
+    background-color: #3E3E3E;
+}
+
+body.dark-mode tr:hover td:first-child {
+    color: #FFD27F;
+}
+
+body.dark-mode tr:hover td:nth-child(2) {
+    color: #F5F5F5;
+}
+
+/* Stacking for smaller screens */
+@media (max-width: 768px) {
+    .menu-table {
+        display: block; /* Better responsiveness */
+    }
+
+    .menu-table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Adjust font sizes for smaller screens */
+    .menu-table td:first-child {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+
+    .menu-table td:nth-child(2) {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+}
+
+/* Adjust for even smaller screens */
+@media (max-width: 480px) {
+    .menu-table td:first-child {
+        font-size: 1rem; /* Smaller font for item names */
+    }
+
+    .menu-table td:nth-child(2) {
+        font-size: 0.9rem; /* Smaller font for descriptions */
+    }
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hide hamburger by default */
+    flex-direction: column;
+    gap: 5px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #A87C7C;
+    border-radius: 3px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+body.dark-mode .hamburger {
+    background: #222222;
+}
+
+/* Hamburger animation for active */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0; /* Hide middle bar */
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* Responsive nav menu */
+@media (max-width: 885px) {
+    .hamburger {
+        display: flex; /* Show hamburger on smaller screens */
+    }
+
+    nav ul.menu {
+        display: none; /* Hide menu at first */
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%;
+        background: #503C3C;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 100;
+        padding: 10px 0;
+    }
+
+    .dark-mode nav ul.menu {
+        background: #222222;
+    }
+
+    nav ul.menu.active {
+        display: flex; /* Show menu when active */
+    }
+
+    nav ul.menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    nav ul.menu li a {
+        font-size: 18px;
+    }
+}
+
+/* Dropdown Menu */
+nav ul .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+nav ul .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #503C3C;
+    width: 190px;  /* Increased width */
+    padding: 10px 15px;
+    border-radius: 10px;  /* Rounded corners */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;  /* Align the dropdown to the right */
+}
+
+/* Dark mode toggle styling */
+nav ul .dropdown-content .dark-mode-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #6a4c4c;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul .dropdown-content .dark-mode-toggle:hover {
+    background-color: #7e6363;
+}
+
+.dark-mode nav ul .dropdown-content{
+    background-color: #222222;
+}
+
+.dark-mode nav ul .dropdown-content li{
+    background-color: #333333;
+}
+
+.dark-mode nav ul .dropdown-content li:hover{
+    background-color: #3E3E3E;
+}
+
+nav ul .dropdown-content li a:hover {
+    color: #7E6363;
+}
+
+nav ul .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Show dropdown when hamburger is clicked in smaller screens */
+@media (max-width: 855px) {
+    nav ul .dropdown-content {
+        position: static; /* Remove absolute positioning */
+        width: 100%; /* Make dropdown take full width */
+        display: none; /* Hide by default on smaller screens */
+    }
+
+    nav ul .dropdown.active .dropdown-content {
+        display: block; /* Show on active state */
+    }
+}
+
+/* Slider container */
+.slider-container {
+    width: 100%; /* Full width */
+    height: 300px; /* Adjust height to fit images */
+    overflow: hidden; /* Hides the extra content outside the viewport */
+    position: relative;
+}
+
+/* Slider element */
+.slider {
+    display: flex;
+    animation: slide 120s linear infinite; /* Slide duration */
+}
+
+/* Slide */
+.slide {
+    flex: 0 0 auto; /* Allow images to shrink */
+    width: 50%; /* Slide takes 50% of the container width */
+}
+
+/* Images inside the slide */
+.slider img {
+    width: 100%; /* Image fits the slide */
+    height: 300px; /* Height */
+    object-fit: cover; /* Images cover the area */
+}
+
+/* Keyframes for smooth scrolling */
+@keyframes slide {
+    0% {
+        transform: translateX(0); /* Start position */
+    }
+    100% {
+        transform: translateX(-1500%); /* 30 images * 50% width */
+    }
+}
+
+/* Locations Section */
+.locations {
+    padding: 20px;
+    margin-bottom: 40px;
+    background: #EED9CF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.locations h2 {
+    color: #6B4226;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.locations .location {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.locations .location img {
+    border: 3px solid #A87C7C; /* Match with gallery borders */
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto; /* Center maps */
+}
+
+.locations .location p {
+    font-size: 1rem;
+    color: #4A3C31;
+    text-align: center;
+}
+
+/* Dark Mode */
+body.dark-mode .locations {
+    background: #3E3E3E;
+}
+
+body.dark-mode .locations h2 {
+    color: #F7C873;
+}
+
+body.dark-mode .locations p {
+    color: #D3D3D3;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 20px;
+    margin-bottom: 40px;
+    background: #F7EDE1;
+    border-left: 5px solid #A87C7C;
+    border-radius: 10px;
+}
+
+.testimonials h2 {
+    font-size: 1.8rem;
+    color: #6B4226;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.testimonials p {
+    font-style: italic;
+    color: #4A3C31;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Dark Mode */
+body.dark-mode .testimonials {
+    background: #3E3E3E;
+    border-left: 5px solid #F7C873;
+}
+
+body.dark-mode .testimonials p {
+    color: #D3D3D3;
+}
+
+/* Events Section */
+.events {
+    padding: 20px;
+    margin-bottom: 40px;
+    background: #EED9CF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.events h2 {
+    font-size: 1.8rem;
+    color: #6B4226;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.events ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.events li {
+    padding: 10px;
+    background: #F7EDE1;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.events li span {
+    font-weight: bold;
+    color: #835C3B;
+}
+
+/* Dark Mode */
+body.dark-mode .events {
+    background: #3E3E3E;
+}
+
+body.dark-mode .events li {
+    background: #4A4A4A;
+}
+
+body.dark-mode .events span {
+    color: #F7C873;
+}
+
+.responsive-map {
+    position: relative;
+    width: 100%; /* Full width of the container */
+    padding-top: 56.25%; /* 16:9 aspect ratio (height/width * 100%) */
+}
+
+.responsive-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Style for the testimonials */
+#testimonials {
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+}
+
+.dark-mode #testimonials {
+    border: 1px solid #F7C873;
+    background-color: #3E3E3E;
+    color: #F7C873;
+}
+
+/* Style for each review container */
+.testimonial {
+    position: relative;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.dark-mode .testimonial {
+    background-color: #3E3E3E;
+}
+
+.dark-mode #testimonials:hover {
+    border-color: #E8B265;
+}
+
+.dark-mode .testimonial:hover {
+    background-color: #4F4F4F;
+}
+
+/* Change background color on hovering over review */
+.testimonial:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.02); /* Zoom effect */
+}
+
+/* Style for the text inside review */
+.testimonial p {
+    margin: 0;
+    color: #555;
+    font-style: italic;
+}
+
+/* Style for the review author's name */
+.testimonial p:last-child {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 0;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #7a4e2a;
+}
+
+.dark-mode .testimonial p:last-child {
+    color: #F7C873;
+}
+
+/* Container for each review */
+.testimonial {
+    display: flex; /* Align profile photos and text horizontally */
+    align-items: center; /* Vertically align the photo with the text */
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+/* Profile photo styling */
+.profile-photo {
+    width: 50px; /* Set photo size */
+    height: 50px; /* Width for circle */
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Image scaling */
+    margin-right: 15px; /* Space between photo and text */
+    border: 2px solid #ddd;
+}
+
+/* Text container for the review */
+.review-text {
+    flex: 1; /* Take up the remaining space next to the profile photo */
+}
+
+/* Text styling for review */
+.review-text p {
+    margin: 0;
+    color: #555;
+    font-style: italic;
+}
+
+.review-text p:last-child {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #7a4e2a;
+}
+
+/* Hover effect for individual reviews */
+.testimonial:hover {
+    background-color: #f9f9f9;
+    transform: scale(1.02);
+}

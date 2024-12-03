@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: durli-6tfjh
+created: 2024-12-03T16:44:17+01:00
